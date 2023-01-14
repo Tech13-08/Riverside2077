@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 7140546899913972987}
   - component: {fileID: 5398049511608523262}
   - component: {fileID: 8246586061328509771}
+  - component: {fileID: 5709541657052833989}
   m_Layer: 0
   m_Name: tempPlayer
   m_TagString: Player
@@ -164,3 +165,31 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.1596674, y: 0.20389551}
   m_EdgeRadius: 0
+--- !u!114 &5709541657052833989
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8268083250434457490}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1c945ef0c7683bd4bb04ac156d142ef4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 1
+  collisionOffset: 0.05
+  moveFilter:
+    useTriggers: 0
+    useLayerMask: 0
+    useDepth: 0
+    useOutsideDepth: 0
+    useNormalAngle: 0
+    useOutsideNormalAngle: 0
+    layerMask:
+      serializedVersion: 2
+      m_Bits: 1
+    minDepth: 0
+    maxDepth: 0
+    minNormalAngle: 0
+    maxNormalAngle: 0
