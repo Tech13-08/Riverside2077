@@ -34,14 +34,14 @@ public class PlayerController : MonoBehaviour
 
     private bool TryMove(Vector2 inputVec){
         int count = rb.Cast(
-            moveInput,
-            //moveFilter,
+            inputVec,
+            moveFilter,
             castCollisions,
             moveSpeed * Time.fixedDeltaTime + collisionOffset
         );
 
         if(count == 0){
-            rb.MovePosition(rb.position + moveInput * moveSpeed * Time.fixedDeltaTime);
+            rb.MovePosition(rb.position + inputVec * moveSpeed * Time.fixedDeltaTime);
             return true;
         }
         else{
