@@ -11,11 +11,14 @@ public class PlayerController : MonoBehaviour
 
     Vector2 moveInput;
     Rigidbody2D rb;
+
+    Animator animator;
     // Start is called before the first frame update
     List<RaycastHit2D> castCollisions = new List<RaycastHit2D>();
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        animator = GetComponent<Animator>();
     }
 
     void FixedUpdate(){
@@ -28,8 +31,37 @@ public class PlayerController : MonoBehaviour
                     success = TryMove(new Vector2(0, moveInput.y));
                 }
             }
+
+            animator.SetBool("isMoving", true);
+            if(moveInput.x < 0){
+                animator.SetBool("movingLeft", true);
+                animator.SetBool("movingRight", false);
+            }
+            else if(moveInput.x > 0){
+                animator.SetBool("movingRight", true);
+                animator.SetBool("movingLeft", false);
+            }
+            else if(moveInput.x == 0){
+                animator.SetBool("movingRight", false);
+                animator.SetBool("movingLeft", false);
+            }
+            if(moveInput.y > 0){
+                animator.SetBool("movingUp", true);
+                animator.SetBool("movingDown", false);
+            }
+            else if(moveInput.y < 0){
+                animator.SetBool("movingDown", true);
+                animator.SetBool("movingUp", false);
+            }
+            else if(moveInput.y == 0){
+                animator.SetBool("movingUp", false);
+                animator.SetBool("movingDown", false);
+            }
+            return;
             
         }
+        animator.SetBool("isMoving", false);
+
     }
 
     private bool TryMove(Vector2 inputVec){

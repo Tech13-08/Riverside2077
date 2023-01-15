@@ -29,6 +29,7 @@ public class Item : MonoBehaviour
             }
             else if(transactionType == TransactionType.COLLECTOR){
                 player.inventory.Add(this, bang);
+                Destroy(gameObject);
             }
             colliding = false;
         }
@@ -44,7 +45,7 @@ public class Item : MonoBehaviour
 }
 
 public enum ItemType{
-    NONE, PLANT_SAPLING, BEAR_BUCKS
+    NONE, PLANT_SAPLING, BEAR_BUCKS, PLASTIC
 }
 
 public enum TransactionType{

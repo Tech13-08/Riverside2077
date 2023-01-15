@@ -76,4 +76,13 @@ public class Inventory
         }
         return false;
     }
+
+    public int ItemCount(ItemType type){
+        foreach(Slot slot in slots){
+            if(slot.type == type){
+                return slot.count;
+            }
+        }
+        return 0;
+    }
 }
