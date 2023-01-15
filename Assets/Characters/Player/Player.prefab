@@ -14,8 +14,9 @@ GameObject:
   - component: {fileID: 5398049511608523262}
   - component: {fileID: 8246586061328509771}
   - component: {fileID: 5709541657052833989}
+  - component: {fileID: 556229767785410102}
   m_Layer: 0
-  m_Name: tempPlayer
+  m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -193,3 +194,15 @@ MonoBehaviour:
     maxDepth: 0
     minNormalAngle: 0
     maxNormalAngle: 0
+--- !u!114 &556229767785410102
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8268083250434457490}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1fdd2c9f6825a8948b95ef36b29efbcf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

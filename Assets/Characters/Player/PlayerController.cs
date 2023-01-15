@@ -5,7 +5,7 @@ using UnityEngine.InputSystem;
 
 public class PlayerController : MonoBehaviour
 {
-    public float moveSpeed = 1f;
+    public float moveSpeed = 3f;
     public float collisionOffset = 0.05f;
     public ContactFilter2D moveFilter;
 
